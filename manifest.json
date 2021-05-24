@@ -2,6 +2,6 @@
   "name": "StunIcons",
   "id": "978525731007244153",
   "api": "1.0.0",
-  "main": "code.js",
-  "ui": "ui.html"
+  "main": "build/main.js",
+  "ui": "build/ui.html"
 }
