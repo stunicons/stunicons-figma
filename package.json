@@ -1,5 +1,5 @@
 {
-    "name": "linktree",
+    "name": "stunicons-figma-plugin",
     "description": "",
     "scripts": {
         "build": "webpack --mode=production",
