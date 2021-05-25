@@ -1,7 +1,7 @@
 {
-  "name": "Stunicons",
-  "id": "758460130791334003",
-  "api": "1.0.0",
-  "main": "build/main.js",
-  "ui": "build/ui.html"
+	"name": "Stunicons",
+	"api": "1.0.0",
+	"main": "dist/code.js",
+	"ui": "dist/ui.html",
+	"id": "my-plugin-id"
 }
