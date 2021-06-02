@@ -5,8 +5,10 @@
 </div>
 </template>
 
-<script>
-import styles from 'figma-plugin-ds/dist/figma-plugin-ds.css'
+<script lang='ts'>
+import 'figma-plugin-ds/dist/figma-plugin-ds.css'
+
+
 import {
   dispatch,
   handleEvent
