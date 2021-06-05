@@ -3,9 +3,13 @@
 		"target": "es6",
 		"module": "es2015",
 		"moduleResolution": "node",
+		"baseUrl": "./",
 		"typeRoots": [
 			"./node_modules/@types",
 			"./node_modules/@figma"
-		  ]
+		  ],
+		"paths": {
+			"stunicons": ["./node_modules/stunicons"]
+		}
 	}
 }
