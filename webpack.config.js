@@ -9,7 +9,7 @@ module.exports = (env, argv) => ({
 	devtool: argv.mode === 'production' ? false : 'inline-source-map',
 
 	entry: {
-		ui: './src/ui/ui.ts', // The entry point for your UI code
+		ui: './src/ui/main.ts', // The entry point for your UI code
 		code: './src/code.ts' // The entry point for your plugin code
 	},
 
@@ -57,7 +57,7 @@ module.exports = (env, argv) => ({
 
 			// Allows you to use "<%= require('./file.svg') %>" in your HTML code to get a data URI
 			{ test: /\.(png|jpg|gif|webp)$/, loader: [{ loader: 'url-loader' }] },
-			
+
 			//load fonts
 			{ 
 				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/, 
@@ -74,7 +74,7 @@ module.exports = (env, argv) => ({
 		path: path.resolve(__dirname, 'dist') // Compile into a folder called "dist"
 	},
 
-	// Tells Webpack to generate "ui.html" and to inline "ui.ts" into it
+	// Tells Webpack to generate "index.html" and to inline "main.ts" into it
 	plugins:
 		argv.mode === 'production'
 			? [
@@ -83,8 +83,8 @@ module.exports = (env, argv) => ({
 						after: { include: ['dist/ui.js'] }
 					}),
 					new HtmlWebpackPlugin({
-						template: './src/ui/ui.html',
-						filename: 'ui.html',
+						template: './src/ui/index.html',
+						filename: 'index.html',
 						inlineSource: '.(js|css|scss)$',
 						chunks: ['ui']
 					}),
@@ -93,8 +93,8 @@ module.exports = (env, argv) => ({
 			: [
 					new VueLoaderPlugin(),
 					new HtmlWebpackPlugin({
-						template: './src/ui/ui.html',
-						filename: 'ui.html',
+						template: './src/ui/index.html',
+						filename: 'index.html',
 						inlineSource: '.(js|css|scss)$',
 						chunks: ['ui']
 					}),
