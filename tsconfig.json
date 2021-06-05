@@ -8,8 +8,5 @@
 			"./node_modules/@types",
 			"./node_modules/@figma"
 		  ],
-		"paths": {
-			"stunicons": ["./node_modules/stunicons"]
-		}
 	}
 }
