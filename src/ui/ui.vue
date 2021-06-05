@@ -3,13 +3,11 @@
 	<button class="button button--primary" @click='createNode'> Create a Vue3 node </button>
   <i class="si-home"></i>
 	<p class="type type--pos-small-normal"> {{message}} </p>
-  <img :src="`./node_modules/stunicons/icons/general/si-home.svg`" alt="">
 </div>
 </template>
 
 <script lang='ts'>
 import 'figma-plugin-ds/dist/figma-plugin-ds.css'
-import 'stunicons/fonts/style.css'
 
 import {
   dispatch,
@@ -19,8 +17,6 @@ import {
   onMounted,
   ref
 } from 'vue';
-
-import home from 'stunicons/icons/general/si-home.svg'
 
 
 export default {
@@ -35,7 +31,6 @@ export default {
     }
     onMounted(() => {
 
-      console.log(home)
 
       // The following shows how messages from the main code can be handled in the UI code.
       handleEvent("nodeCreated", nodeID => {
