@@ -1,7 +1,11 @@
 <template>
 <div id="ui">
 	<button class="button button--primary" @click='createNode'> Create a Vue3 node </button>
+  
+  <!-- an example to show how to use stunicons in vue -->
   <i class="si-home"></i>
+
+  
 	<p class="type type--pos-small-normal"> {{message}} </p>
 </div>
 </template>
