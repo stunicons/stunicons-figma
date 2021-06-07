@@ -10,6 +10,8 @@
 	},
 	"dependencies": {
 		"@vue/compiler-sfc": "^3.0.2",
+		"bootstrap": "^5.0.1",
+		"bootstrap-vue": "^2.21.2",
 		"figma-plugin-ds": "^0.1.8",
 		"stunicons": "^1.0.19"
 	},
@@ -27,7 +29,7 @@
 		"ts-loader": "^6.0.2",
 		"typescript": "^3.5.1",
 		"url-loader": "^1.1.2",
-		"vue": "^3.0.2",
+		"vue": "^3.0.11",
 		"vue-loader": "^16.0.0-beta.8",
 		"vue-template-compiler": "^2.6.10",
 		"webpack": "^4.32.2",

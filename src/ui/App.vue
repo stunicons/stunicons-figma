@@ -1,66 +1,74 @@
 <template>
 <div id="ui">
-	<button class="button button--primary" @click='createNode'> Create a Vue3 node </button>
   
-  <!-- an example to show how to use stunicons in vue -->
-  <i class="si-home"></i>
+  <div id="searchBox">
+    <i class="si-search" id="searchIcon"></i>
+      <input type="text" placeholder="Search an icon">
+    <i class="si-exit exitIcon"></i>
+</div>
 
-  
-	<p class="type type--pos-small-normal"> {{message}} </p>
 </div>
 </template>
 
 <script lang='ts'>
-import 'figma-plugin-ds/dist/figma-plugin-ds.css'
-
-import {
-  dispatch,
-  handleEvent
-} from "./uiMessageHandler";
-import {
-  onMounted,
-  ref
-} from 'vue';
 
 
 export default {
-  setup() {
-
-    const message = ref("message")
-    let icon = ref("")
-
-    function createNode() {
-      // This shows how the UI code can send messages to the main code.
-      dispatch("createNode");
-    }
-    onMounted(() => {
-
-
-      // The following shows how messages from the main code can be handled in the UI code.
-      handleEvent("nodeCreated", nodeID => {
-        message.value = `Node ${nodeID} was created!`;
-      });
-
-    })
-
-    return {
-      message,
-      createNode,
-      icon
-    };
-  }
 
 };
 </script>
 
 <style scoped>
 /* @import url('https://cdn.jsdelivr.net/npm/stunicons@1.0.11/fonts/style.min.css'); */
-
+.btn{
+  background: #3234;
+}
 #ui{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: var(--size-medium);
+}
+
+#searchBox{
+  padding: 10px;
+  background:#FFF0EA;
+  display: flex;
+  align-items: center;
+  height: 15px;
+
+}
+#searchIcon{
+  width:50px;
+  cursor: pointer;
+  color: #BFC7D3;
+  font-size: 14px;
+}
+.exitIcon{
+  border-radius: 20px;
+  color: #BFC7D3;
+  cursor: pointer;
+  background: #ffffff;
+  font-size: 9px;
+  padding: 5px;
+}
+.menuIcon{
+  width: 20px;
+  color: #BFC7D3;
+  font-size: 15px;
+}
+input{
+  font-size: 10px;
+  width: 150px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  outline: none;
+ 
+}
+
+::placeholder{
+  color: #BFC7D3;
 }
 </style>
