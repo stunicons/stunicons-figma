@@ -34,10 +34,6 @@ export default defineComponent({
   background: #3234;
 }
 #ui{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   
   .search{
     padding:$s-sm 0;
