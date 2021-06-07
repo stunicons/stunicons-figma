@@ -1,10 +1,12 @@
 <template>
 <div id="ui">
   
-  <div class="search">
+  <section class="search">
     <Search v-model="searchString" />
-  </div>
-
+  </section>
+  <section class="icons-body">
+    <IconsList/>
+  </section>
 
 </div>
 </template>
@@ -12,9 +14,10 @@
 <script lang='ts'>
 import { defineComponent, Ref, ref } from "vue";
 import Search from "./components/Search.vue";
+import IconsList from "./components/Icons-list.vue";
 
 export default defineComponent({
-    components: { Search },
+    components: { Search,IconsList },
     setup(){
       let searchString: Ref<string> = ref('')
 
@@ -37,7 +40,7 @@ export default defineComponent({
   justify-content: space-between;
   
   .search{
-    padding:$s-sm;
+    padding:$s-sm 0;
   }
 }
 </style>
