@@ -1,7 +1,7 @@
-interface IconsInterface {
+type IconsList = {
     categoryName: string;
     icons: Icon[];
-}
+};
 
 type Icon = {
     id: string;
