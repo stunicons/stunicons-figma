@@ -1,0 +1,54 @@
+{
+    "icons": [
+      {
+        "categoryName": "general",
+        "icons": [
+          {"id": "si-home", "name": "home", "tags": ["home", "building", "room", "residence", "shelter", "institution"]},
+          {"id": "si-menu-bar", "name": "menu bar", "tags": ["menu", "lines", "bar", "tariff", "hamburger"]},
+          {"id": "si-plus", "name": "plus", "tags": ["addition", "plus", "sign", "and", "bonus", "extra"]},
+          {"id": "si-search", "name": "search", "tags": ["search", "find", "look"]},
+          {"id": "si-user", "name": "user", "tags": ["end user", "person", "profile", "customer", "client"]},
+          {"id": "si-arrow-down", "name": "arrow down", "tags": ["arrow", "down", "fresh"]},
+          {"id": "si-arrow-left", "name": "arrow left", "tags": ["arrow", "left", "fresh"]},
+          {"id": "si-arrow-right", "name": "arrow right", "tags": ["arrow", "right", "fresh"]},
+          {"id": "si-arrow-up", "name": "arrow up", "tags": ["arrow", "up", "fresh" ]},
+          {"id": "si-copyright", "name": "copyright", "tags": ["copyright", "label", "collective mark"]},
+          {"id": "si-dashboard", "name": "dashboard", "tags": ["dashboard","admin", "control", "desk"]},
+          {"id": "si-delete", "name": "delete", "tags": ["remove","delete","bin", "unpublished", "cancel"]},
+          {"id": "si-document", "name": "document", "tags": ["document","file", "pdf","doc", "paper", "form"]},
+          {"id": "si-download", "name": "download", "tags": ["download","fetch", "transfer", "internet", "unload"]},
+          {"id": "si-exit", "name": "exit", "tags": ["cancel","exit","escape", "leave","drop"]},
+          {"id": "si-eye", "name": "eye", "tags": ["eye","watching","see", "sight", "aperture"]},
+          {"id": "si-gmail", "name": "gmail", "tags": ["gmail","email", "e-mail", "message"]},
+          {"id": "si-heart", "name": "heart", "tags": ["heart","love","like", "passion"]},
+          {"id": "si-location-off", "name": "location off", "tags": ["location","off", "gps", "latitude","longitude", "site", "point", "spot", "area", "scene"]},
+          {"id": "si-location-on", "name": "location on", "tags": ["location","on", "gps", "latitude","longitude", "site", "point", "spot", "area", "scene"]},
+          {"id": "si-facebook", "name": "facebook", "tags": ["facebook","fb"]},
+          {"id": "si-instagram", "name": "instagram", "tags": ["instagram","ig"]},
+          {"id": "si-linkedin", "name": "linkedin", "tags": ["linkedin","ig"]},
+          {"id": "si-youtube", "name": "youtube", "tags": ["youtube","video","tutorial","clip"]},
+          {"id": "si-more-horizontal", "name": "more", "tags": ["more", "horizontal", "options", "extra", "further", "other"]},
+          {"id": "si-more-vertical", "name": "more", "tags": ["more", "vertical", "options", "extra", "further", "other"]},
+          {"id": "si-movie", "name": "movie", "tags": ["movie","tv","film","video", "picture", "landscape", "portrait"]},
+          {"id": "si-share", "name": "share", "tags": ["share", "duplicate", "exchange", "interchange"]},
+          {"id": "si-thumbs-down", "name": "thumbs down", "tags": ["thumbs", "down","like","love"]},
+          {"id": "si-thumbs-up", "name": "thumbs up", "tags": ["thumbs", "up","unlike","dislike","hate"]},
+          {"id": "si-video", "name": "video", "tags": ["movie","tv","film","video", "picture", "landscape", "portrait"]},
+          {"id": "si-bookmark", "name": "bookmark", "tags": ["bookmark", "save", "pin", "tag", "clip", "flag", "marker"]},
+          {"id": "si-chevron-left", "name": "chevron left", "tags": ["chevron-left","chevron","left"]},
+          {"id": "si-chevron-right", "name": "chevron right", "tags": ["chevron-right","chevron","right"]},
+          {"id": "si-chevron-down", "name": "chevron down", "tags": ["chevron-down","chevron","down"]},
+          {"id": "si-chevron-up", "name": "chevron up", "tags": ["chevron-up","chevron","up"]},
+          {"id": "si-dribbble", "name": "dribbble", "tags": ["dribbble","designer"]},
+          {"id": "si-edit", "name": "edit", "tags": ["edit","modify","correct","check","improve","revise"]},
+          {"id": "si-file-list", "name": "file list", "tags": ["file-list","folder","box","document"]},
+          {"id": "si-folder", "name": "folder", "tags": ["file-list","folder","box","document"]},
+          {"id": "si-star", "name": "star", "tags": ["star"]},
+          {"id": "si-upload", "name": "upload", "tags": ["upload","send","transfer","transmit"]},
+          {"id": "si-mic", "name": "mic", "tags": ["mic","megaphone","recorder","transmitter","amplifier"]},
+          {"id": "si-moon", "name": "moon", "tags": ["moon","galaxy"]}
+        ]
+      }
+    ]
+  }
+  

@@ -3,10 +3,13 @@
 		"target": "es6",
 		"module": "es2015",
 		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports":true,
 		"baseUrl": "./",
 		"typeRoots": [
 			"./node_modules/@types",
-			"./node_modules/@figma"
+			"./node_modules/@figma",
+			"./src/ui/types"
 		  ],
 	}
 }
