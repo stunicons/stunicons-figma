@@ -1,9 +1,9 @@
 <template>
     <section class="icons-list">
-        <section class="icons-list--wraper">
-            <div v-for="iconGroup in icons" :key="iconGroup.categoryName">
+        <section class="icons-list--wrapper">
+            <div class="category-wrapper" v-for="iconGroup in icons" :key="iconGroup.categoryName">
               <div v-for="icon in iconGroup.icons" :key="icon.id"> 
-                  <Icon name="icon.id"/>
+                  <Icon :name="icon.id"/>
               </div>
             </div>
         </section>
@@ -17,9 +17,10 @@ import Icon from './Icon.vue';
 
 
 
+
 export default defineComponent({
     setup() {
-        const icons = _icons;
+        const icons: IconsList = _icons as unknown as IconsList;
         console.log(icons)
         return { icons };
     },
@@ -28,5 +29,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-
+.icons-list{
+  &--wrapper{
+    .category-wrapper{
+      display:flex;
+      flex-wrap:wrap;
+    }
+  }
+}
 </style>
