@@ -1,7 +1,7 @@
 <template>
       <div id="searchBox">
         <i class="si-search" id="searchIcon"></i>
-          <input type="text" placeholder="Search an icon">
+          <input @input="inputed" :value="modelValue" type="text" placeholder="Search an icon">
         <i class="si-exit exitIcon"></i>
     </div>
 </template>
@@ -9,8 +9,18 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  props:['modelValue'],
+  emits: ['update:modelValue'],
   setup() {
     
+    // funcdtion to listen on new search string
+    function inputed(e){
+      this.$emit('update:modelValue',e.target.value)
+    }
+
+    return{
+      inputed
+    }
   },
 })
 </script>
