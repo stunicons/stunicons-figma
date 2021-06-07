@@ -1,8 +1,6 @@
 <template>
     <div class="icon">
-        <div class="icon-w">
-            <i :class="name"></i>
-        </div>
+        <i :class="name"></i>
     </div>
 </template>
 <script lang="ts">
@@ -20,3 +18,12 @@ export default defineComponent({
     },
 })
 </script>
+<style lang="scss" scoped>
+.icon{
+    padding:$s-md;
+    
+    &:hover{
+        background-color:#F0F0F0;
+    }
+}
+</style>
