@@ -1,7 +1,7 @@
 <template>
     <div class="icon">
         <div class="icon-w">
-            <i :class="className"></i>
+            <i :class="name"></i>
         </div>
     </div>
 </template>
@@ -10,9 +10,9 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
     props:{
-        className:{
+        name:{
             type:String,
-            default:''
+            required:true
         }
     },
     setup() {
