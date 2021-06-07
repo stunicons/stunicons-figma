@@ -9,7 +9,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  props:['modelValue'],
+  props:{
+    modelValue:{
+      type:[String, Number],
+      default:''
+    }
+  },
   emits: ['update:modelValue'],
   setup() {
     
