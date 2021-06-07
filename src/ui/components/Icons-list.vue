@@ -16,12 +16,10 @@ import {icons as _icons} from '../services/icons.json'
 import Icon from './Icon.vue';
 
 
-
-
 export default defineComponent({
     setup() {
         const icons: IconsList = _icons as unknown as IconsList;
-        console.log(icons)
+
         return { icons };
     },
     components: { Icon },
@@ -32,8 +30,12 @@ export default defineComponent({
 .icons-list{
   &--wrapper{
     .category-wrapper{
-      display:flex;
-      flex-wrap:wrap;
+      width:100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,2.8rem);
+      grid-gap: 0.1rem;
+      justify-content: space-between;  
+      height: 100%; /* adjust this*/  
     }
   }
 }
