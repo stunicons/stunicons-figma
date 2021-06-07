@@ -21,6 +21,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .icon{
     padding:$s-md;
+    border-radius:1px;
+    cursor:pointer;
     
     &:hover{
         background-color:#F0F0F0;
