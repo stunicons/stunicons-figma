@@ -37,6 +37,9 @@ export default defineComponent({
   
   .search{
     padding:$s-sm 0;
+    display:flex;
+    justify-content:center;
+    
   }
 }
 </style>
