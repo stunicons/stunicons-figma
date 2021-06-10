@@ -46,15 +46,15 @@ export default defineComponent({
 
     }
     #searchIcon{
-      width:50px;
+      width:25px;
       cursor: pointer;
       color: #BFC7D3;
       font-size: 14px;
     }
     
     .cancel-icon{
-      width:25px;
-      height:25px;
+      width:20px;
+      height:20px;
       
       span{
         color: #BFC7D3;
@@ -65,9 +65,9 @@ export default defineComponent({
         place-items:center;
         border-radius: 20px;
         cursor: pointer;
-        
+
         .exitIcon{
-        font-size: 10px;
+        font-size: 8px;
       }
       }
       
@@ -79,7 +79,7 @@ export default defineComponent({
       font-size: 15px;
     }
     input{
-      font-size: 10px;
+      font-size: 12px;
       width: 150px;
       height: 20px;
       border: 0;
