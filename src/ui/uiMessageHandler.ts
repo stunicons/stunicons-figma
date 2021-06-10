@@ -1,8 +1,9 @@
-const eventListeners: { type: string; callback: Function }[] = [];
-export const dispatch = (action: string, data?: any) => {
+const eventListeners: { type: string; callback: (data?: string) => void }[] = [];
+
+export const dispatch = (action: string, data?: unknown): void => {
     parent.postMessage({ pluginMessage: { action, data } }, '*');
 };
-export const handleEvent = (type: string, callback: Function) => {
+export const handleEvent = (type: string, callback: (data?: string) => void): void => {
     eventListeners.push({ type, callback });
 };
 window.onmessage = (event) => {
