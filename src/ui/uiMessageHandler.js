@@ -5,12 +5,11 @@ export const dispatch = (action, data) => {
 export const handleEvent = (type, callback) => {
     eventListeners.push({ type, callback });
 };
-window.onmessage = event => {
+window.onmessage = (event) => {
     const message = event.data.pluginMessage;
     if (message) {
         for (let eventListener of eventListeners) {
-            if (message.action === eventListener.type)
-                eventListener.callback(message.data);
+            if (message.action === eventListener.type) eventListener.callback(message.data);
         }
     }
 };

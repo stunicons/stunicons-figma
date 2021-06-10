@@ -33,11 +33,19 @@ export default defineComponent({
 .btn{
   background: #3234;
 }
+
+html, body{
+    margin: 0 !important;
+    padding:0 !important;
+    background-color: dodgerblue;
+}
+
 #ui{
   
   .search{
     padding:$s-sm 0;
     display:flex;
+    border-bottom:1px solid red;
     justify-content:center;
     
   }

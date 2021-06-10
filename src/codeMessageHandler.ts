@@ -1,12 +1,12 @@
-const eventListeners: { type: String; callback: Function }[] = [];
-export const dispatch = (action: String, data?: any) => {
-	figma.ui.postMessage({ action, data });
+const eventListeners: { type: string; callback: Function }[] = [];
+export const dispatch = (action: string, data?: any) => {
+    figma.ui.postMessage({ action, data });
 };
-export const handleEvent = (type: String, callback: Function) => {
-	eventListeners.push({ type, callback });
+export const handleEvent = (type: string, callback: Function) => {
+    eventListeners.push({ type, callback });
 };
-figma.ui.onmessage = message => {
-	for (let eventListener of eventListeners) {
-		if (message.action === eventListener.type) eventListener.callback(message.data);
-	}
+figma.ui.onmessage = (message) => {
+    for (const eventListener of eventListeners) {
+        if (message.action === eventListener.type) eventListener.callback(message.data);
+    }
 };
