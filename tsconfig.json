@@ -11,5 +11,8 @@
 			"./node_modules/@figma",
 			"./src/ui/types"
 		  ],
-	}
+		},
+		"exclude":[
+			"./webpack.config.js"
+		]
 }
