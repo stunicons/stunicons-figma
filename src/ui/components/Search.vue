@@ -1,8 +1,10 @@
 <template>
       <div id="searchBox">
         <i class="si-search" id="searchIcon"></i>
-          <input @input="inputed" :value="modelValue" type="text" placeholder="Search an icon">
-        <i class="si-exit exitIcon"></i>
+          <input @input="inputed" v-model="searchKey"  type="text" placeholder="Search an icon">
+        <div class="cancel-icon" >
+          <span v-if="searchKey.trim().length > 0" ><i class="si-exit exitIcon"></i></span>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -11,12 +13,13 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   props:{
     modelValue:{
-      type:[String, Number],
+      type:String,
       default:''
     }
   },
   emits: ['update:modelValue'],
-  setup() {
+  setup(props) {
+    let searchKey: string = props.modelValue as string;
     
     // funcdtion to listen on new search string
     function inputed(e){
@@ -24,7 +27,8 @@ export default defineComponent({
     }
 
     return{
-      inputed
+      inputed,
+      searchKey
     }
   },
 })
@@ -47,14 +51,28 @@ export default defineComponent({
       color: #BFC7D3;
       font-size: 14px;
     }
-    .exitIcon{
-      border-radius: 20px;
-      color: #BFC7D3;
-      cursor: pointer;
-      background: #ffffff;
-      font-size: 9px;
-      padding: 5px;
+    
+    .cancel-icon{
+      width:25px;
+      height:25px;
+      
+      span{
+        color: #BFC7D3;
+        background: #ffffff;
+        width:100%;
+        height:100%;
+        display:grid;
+        place-items:center;
+        border-radius: 20px;
+        cursor: pointer;
+        
+        .exitIcon{
+        font-size: 10px;
+      }
+      }
+      
     }
+
     .menuIcon{
       width: 20px;
       color: #BFC7D3;
