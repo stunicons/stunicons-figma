@@ -43,11 +43,16 @@ html, body{
 #ui{
   
   .search{
-    padding:$s-sm 0;
+    padding:$s-md 0;
     display:flex;
-    border-bottom:1px solid red;
+    border-bottom:1px solid $gray;
     justify-content:center;
+    margin-bottom: $s-xs;
     
+  }
+
+  .icons-body{
+    padding: 0 $s-xs;
   }
 }
 </style>
