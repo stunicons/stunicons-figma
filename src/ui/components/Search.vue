@@ -3,12 +3,12 @@
         <i class="si-search" id="searchIcon"></i>
           <input @input="inputed" v-model="searchKey"  type="text" placeholder="Search an icon">
         <div class="cancel-icon" >
-          <span v-if="searchKey.trim().length > 0" ><i class="si-exit exitIcon"></i></span>
+          <span @click="deleted" v-if="searchKey.trim().length > 0" ><i class="si-exit exitIcon"></i></span>
         </div>
     </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent , ref , Ref} from 'vue'
 
 export default defineComponent({
   props:{
@@ -19,16 +19,21 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props) {
-    let searchKey: string = props.modelValue as string;
+    let searchKey: Ref = ref(props.modelValue);
     
     // funcdtion to listen on new search string
     function inputed(e){
       this.$emit('update:modelValue',e.target.value)
     }
 
+    function deleted(){
+      searchKey.value = ''
+    }
+
     return{
       inputed,
-      searchKey
+      searchKey,
+      deleted
     }
   },
 })
