@@ -1,20 +1,29 @@
 <template>
-    <div class="icon">
+    <div class="icon" @click="createNode">
         <i :class="name"></i>
     </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
+import { dispatch} from "../uiMessageHandler";
 
 export default defineComponent({
     props:{
-        name:{
-            type:String,
+        icon:{
+            type:Object as PropType<IconCategory>,
             required:true
         }
     },
-    setup() {
+    setup(props) {
         
+        function createNode() {
+        // This shows how the UI code can send messages to the main code.
+        dispatch("insertIcon",props.icon.name);
+        }
+
+        return {
+            createNode
+        }
     },
 })
 </script>
