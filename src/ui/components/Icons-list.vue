@@ -3,7 +3,7 @@
         <section class="icons-list--wrapper">
             <div class="category-wrapper" v-for="iconGroup in icons" :key="iconGroup.categoryName">
               <div v-for="icon in iconGroup.icons" :key="icon.id"> 
-                  <Icon :name="icon.id"/>
+                  <Icon :icon="{name:icon.id,category:iconGroup.categoryName}"/>
               </div>
             </div>
         </section>
