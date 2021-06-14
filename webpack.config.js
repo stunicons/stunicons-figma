@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const RemovePlugin = require('remove-files-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -16,7 +17,7 @@ module.exports = (env, argv) => ({
         rules: [
             // Converts TypeScript code to JavaScript
             {
-                test: /\.tsx?$/,
+                test: /\.ts?$/,
                 loader: 'ts-loader',
                 exclude: /node_modules/,
                 options: {
