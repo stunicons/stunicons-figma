@@ -1,11 +1,12 @@
 <template>
     <div class="icon" @click="createNode">
-        <i :class="name"></i>
+        <i :class="icon.name"></i>
     </div>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { dispatch} from "../uiMessageHandler";
+import '../types/index'
 
 export default defineComponent({
     props:{
@@ -14,11 +15,11 @@ export default defineComponent({
             required:true
         }
     },
-    setup(props) {
+    setup({icon}) {
         
         function createNode() {
         // This shows how the UI code can send messages to the main code.
-        dispatch("insertIcon",props.icon.name);
+        dispatch("insertIcon",icon);
         }
 
         return {
