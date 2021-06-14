@@ -8,3 +8,8 @@ type Icon = {
     name: string;
     tags: string[];
 };
+
+type IconCategory = {
+    name:string,
+    category:string,
+}
