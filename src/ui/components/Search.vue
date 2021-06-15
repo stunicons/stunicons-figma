@@ -8,7 +8,7 @@
     </div>
 </template>
 <script lang="ts">
-import { defineComponent , ref , Ref} from 'vue'
+import { defineComponent , ref , Ref, getCurrentInstance} from 'vue'
 
 export default defineComponent({
   props:{
@@ -17,14 +17,18 @@ export default defineComponent({
       default:''
     }
   },
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue','input'],
   setup(props) {
     let searchKey: Ref = ref(props.modelValue);
-    
+     const internalInstance = getCurrentInstance(); 
+      const bus = internalInstance.appContext.config.globalProperties.bus;
+
     // funcdtion to listen on new search string
     function inputed(e){
       this.$emit('update:modelValue',e.target.value)
+      bus.emit('search',e.target.value)
     }
+
 
     function deleted(){
       searchKey.value = ''

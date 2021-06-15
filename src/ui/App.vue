@@ -5,7 +5,7 @@
     <Search v-model="searchString" />
   </section>
   <section class="icons-body">
-    <IconsList/>
+    <IconsList />
   </section>
 
 </div>
