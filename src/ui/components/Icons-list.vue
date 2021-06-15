@@ -11,13 +11,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent , ref, Ref, watch, PropType, getCurrentInstance, onMounted} from 'vue'
+import { defineComponent , ref, Ref, getCurrentInstance, onMounted} from 'vue'
 import {icons as _icons} from '../services/icons.json'
 import Icon from './Icon.vue';
 
 
 export default defineComponent({
-  setup(props) {
+  setup() {
       const iconsList: Ref<IconsList[]> = ref<IconsList[]>(_icons);
       const internalInstance = getCurrentInstance(); 
       const bus = internalInstance.appContext.config.globalProperties.bus;
@@ -30,13 +30,13 @@ export default defineComponent({
         //  if there is no search keyword
         //  show all icons
         if(value.trim().length <=0){
-          this.icons = icons;
+          iconsList.value = icons;
           return ;
         }
 
         //search
 
-        icons.map(iconCategory => { // loop in all icons categories
+        iconsList.value.map(iconCategory => { // loop in all icons categories
 
           iconCategory.icons.map(icon => { //loop into icons into single icon category
 
@@ -53,7 +53,7 @@ export default defineComponent({
               })
 
               if(existenceOfCategoryGroup.length > 0) // if icon group exists push new icons to the category
-                foundIcons[iconGroupIndex].icons.push(icon)
+                foundIcons.value[iconGroupIndex].icons.push(icon)
               else    //if category does not exist add it with new found icon
                 foundIcons.value.push({categoryName:iconCategory.categoryName,icons:[icon]})
             }
@@ -63,13 +63,11 @@ export default defineComponent({
         })
 
         iconsList.value = foundIcons.value
-
+        console.log(iconsList.value,foundIcons.value)
       }
 
       onMounted(() => {
-        bus.on('search', (searchString)=>{
-          console.log(searchString)
-        })
+        bus.on('search', search)
       })
 
       return { iconsList,search };
