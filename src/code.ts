@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { dispatch, handleEvent } from './codeMessageHandler';
 import { dataUriToSvg } from './ui/utils/svgToEl';
 
