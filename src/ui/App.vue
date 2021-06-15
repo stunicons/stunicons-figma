@@ -43,7 +43,7 @@ html, body{
 #ui{
   
   .search{
-    padding:$s-md 0;
+    padding:$s-md ;
     display:flex;
     border-bottom:1px solid $gray;
     justify-content:center;
@@ -52,7 +52,7 @@ html, body{
   }
 
   .icons-body{
-    padding: 0 $s-xs;
+    padding: 0 $s-md $s-md $s-md;
   }
 }
 </style>

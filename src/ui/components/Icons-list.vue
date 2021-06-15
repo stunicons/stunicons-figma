@@ -82,7 +82,7 @@ export default defineComponent({
     .category-wrapper{
       width:100%;
       display: grid;
-      grid-template-columns: repeat(auto-fill,2.8rem);
+      grid-template-columns: repeat(auto-fill,3rem);
       grid-gap: 0.1rem;
       justify-content: space-between;   
     }

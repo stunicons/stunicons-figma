@@ -70,11 +70,11 @@ export default defineComponent({
       span{
         color: #BFC7D3;
         background: #ffffff;
-        width:100%;
-        height:100%;
+        width:20px;
+        height:20px;
         display:grid;
         place-items:center;
-        border-radius: 20px;
+        border-radius: 50%;
         cursor: pointer;
 
         .exitIcon{

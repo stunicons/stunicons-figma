@@ -33,6 +33,9 @@ export default defineComponent({
     padding:$s-md;
     border-radius:1px;
     cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     
     &:hover{
         background-color:#F0F0F0;
