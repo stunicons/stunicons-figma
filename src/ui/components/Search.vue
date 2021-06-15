@@ -32,6 +32,7 @@ export default defineComponent({
 
     function deleted(){
       searchKey.value = ''
+      bus.emit('search',searchKey.value)
     }
 
     return{
@@ -50,7 +51,8 @@ export default defineComponent({
       width:100%;
       margin:0 1rem;
       padding: 10px;
-      background:#FFF0EA;
+      border:1.5px solid #BFC7D3;
+      border-radius:2px;
       display: flex;
       align-items: center;
       height: 15px;
