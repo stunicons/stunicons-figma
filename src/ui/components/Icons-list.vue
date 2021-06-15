@@ -84,8 +84,7 @@ export default defineComponent({
       display: grid;
       grid-template-columns: repeat(auto-fill,2.8rem);
       grid-gap: 0.1rem;
-      justify-content: space-between;  
-      height: 100%; /* adjust this*/  
+      justify-content: space-between;   
     }
   }
 }
