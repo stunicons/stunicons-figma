@@ -43,6 +43,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 
 #searchBox{
+      width:100%;
+      margin:0 1rem;
       padding: 10px;
       background:#FFF0EA;
       display: flex;
@@ -85,7 +87,7 @@ export default defineComponent({
     }
     input{
       font-size: 12px;
-      width: 150px;
+      width: 100%;
       height: 20px;
       border: 0;
       background: transparent;

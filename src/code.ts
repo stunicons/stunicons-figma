@@ -11,10 +11,13 @@ figma.showUI(__html__, options);
 handleEvent('insertIcon', (icon) => {
     import(`stunicons/icons/${icon.category}/${icon.name}.svg`)
         .then(async (s) => {
+            const _name: string = icon.name.replace('si-', '');
             const svg: string = await dataUriToSvg(s);
             const node: FrameNode = figma.createNodeFromSvg(svg);
-            node.name = icon.name;
-            node.rescale(0.5);
+            node.name = _name;
+            node.resize(25, 25);
+            node.x = figma.viewport.center.x;
+            node.y = figma.viewport.center.y;
         })
         .catch((er) => {
             console.log(er);
