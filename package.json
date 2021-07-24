@@ -8,13 +8,13 @@
 		"build": "webpack --mode=production",
 		"preview": "live-server --entry-file='livepreview.html'",
 		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-		"update":"yarn remove stunicons && yarn add stunicons"
+		"update": "yarn remove stunicons && yarn add stunicons"
 	},
 	"dependencies": {
 		"@vue/compiler-sfc": "^3.0.2",
 		"figma-plugin-ds": "^0.1.8",
 		"mitt": "^2.1.0",
-		"stunicons": "^1.0.19"
+		"stunicons": "^1.1.0"
 	},
 	"devDependencies": {
 		"@figma/plugin-typings": "^1.18.2",
