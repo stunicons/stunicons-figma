@@ -7,7 +7,8 @@
 		"dev": "webpack --mode=development --watch",
 		"build": "webpack --mode=production",
 		"preview": "live-server --entry-file='livepreview.html'",
-		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+		"update":"yarn remove stunicons && yarn add stunicons"
 	},
 	"dependencies": {
 		"@vue/compiler-sfc": "^3.0.2",
